@@ -3,27 +3,87 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30E6AC7C7977EF48092E24DB /* Pods_Hunt_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D68C2E8BD7322E7927DB97 /* Pods_Hunt_Tracker.framework */; };
+		70452DEF23A7E04C006CFA5B /* AnimalsShotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70452DEE23A7E04C006CFA5B /* AnimalsShotViewController.swift */; };
+		70452DF123A7FAEB006CFA5B /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70452DF023A7FAEB006CFA5B /* NotesViewController.swift */; };
+		70452DF323A80032006CFA5B /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70452DF223A80032006CFA5B /* SummaryViewController.swift */; };
+		706E9C9823A5E5C300B9DD4A /* TextEntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706E9C9623A5E5C300B9DD4A /* TextEntryTableViewCell.swift */; };
+		706E9C9923A5E5C300B9DD4A /* TextEntryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706E9C9723A5E5C300B9DD4A /* TextEntryTableViewCell.xib */; };
+		706E9C9C23A5E67300B9DD4A /* LabeledEntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706E9C9A23A5E67300B9DD4A /* LabeledEntryTableViewCell.swift */; };
+		706E9C9D23A5E67300B9DD4A /* LabeledEntryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706E9C9B23A5E67300B9DD4A /* LabeledEntryTableViewCell.xib */; };
+		706E9CA023A6951700B9DD4A /* FeederTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706E9C9E23A6951700B9DD4A /* FeederTableViewCell.swift */; };
+		706E9CA123A6951700B9DD4A /* FeederTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706E9C9F23A6951700B9DD4A /* FeederTableViewCell.xib */; };
+		706E9CA323A6952E00B9DD4A /* Feeder Cell Delegate Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706E9CA223A6952E00B9DD4A /* Feeder Cell Delegate Protocol.swift */; };
+		706E9CA723A69EC400B9DD4A /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706E9CA623A69EC400B9DD4A /* TabBarViewController.swift */; };
+		706E9CA923A6B76F00B9DD4A /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706E9CA823A6B76F00B9DD4A /* InfoViewController.swift */; };
+		706E9CAB23A6BA2700B9DD4A /* AnimalsSeenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706E9CAA23A6BA2700B9DD4A /* AnimalsSeenViewController.swift */; };
+		706E9CAE23A6CBC900B9DD4A /* CounterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706E9CAC23A6CBC900B9DD4A /* CounterTableViewCell.swift */; };
+		706E9CAF23A6CBC900B9DD4A /* CounterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706E9CAD23A6CBC900B9DD4A /* CounterTableViewCell.xib */; };
+		706E9CB123A6CBD700B9DD4A /* Counter Cell Delegate Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706E9CB023A6CBD700B9DD4A /* Counter Cell Delegate Protocol.swift */; };
+		706E9CB323A6DC2700B9DD4A /* NewAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706E9CB223A6DC2700B9DD4A /* NewAnimalViewController.swift */; };
+		706E9CB523A714A200B9DD4A /* NewSubtypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706E9CB423A714A200B9DD4A /* NewSubtypeViewController.swift */; };
 		70DFF70823A564A6000FE306 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DFF70723A564A6000FE306 /* AppDelegate.swift */; };
 		70DFF70A23A564A6000FE306 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DFF70923A564A6000FE306 /* SceneDelegate.swift */; };
-		70DFF70C23A564A6000FE306 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DFF70B23A564A6000FE306 /* ViewController.swift */; };
 		70DFF70F23A564A6000FE306 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70DFF70D23A564A6000FE306 /* Main.storyboard */; };
 		70DFF71123A564A8000FE306 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70DFF71023A564A8000FE306 /* Assets.xcassets */; };
 		70DFF71423A564A8000FE306 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70DFF71223A564A8000FE306 /* LaunchScreen.storyboard */; };
+		70DFF72123A567F0000FE306 /* Hunt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DFF72023A567F0000FE306 /* Hunt.swift */; };
+		70DFF72323A56A97000FE306 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DFF72223A56A97000FE306 /* Animal.swift */; };
+		70DFF72523A56B7A000FE306 /* AnimalSubtype.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DFF72423A56B7A000FE306 /* AnimalSubtype.swift */; };
+		70DFF72723A56C58000FE306 /* Feeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DFF72623A56C58000FE306 /* Feeder.swift */; };
+		70DFF72923A56D11000FE306 /* SummaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DFF72823A56D11000FE306 /* SummaryTableViewController.swift */; };
+		70DFF72B23A57FDF000FE306 /* SeasonSummaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DFF72A23A57FDF000FE306 /* SeasonSummaryTableViewController.swift */; };
+		70DFF73123A5D396000FE306 /* DateEntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DFF72F23A5D396000FE306 /* DateEntryTableViewCell.swift */; };
+		70DFF73223A5D396000FE306 /* DateEntryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70DFF73023A5D396000FE306 /* DateEntryTableViewCell.xib */; };
+		70DFF73423A5D493000FE306 /* Date Picker Cell Delegate Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DFF73323A5D493000FE306 /* Date Picker Cell Delegate Protocol.swift */; };
+		70DFF73A23A5DA27000FE306 /* Labeled Entry Cell Delegate Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DFF73923A5DA27000FE306 /* Labeled Entry Cell Delegate Protocol.swift */; };
+		70DFF74023A5DE39000FE306 /* Text Entry Cell Delegate Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DFF73F23A5DE39000FE306 /* Text Entry Cell Delegate Protocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		225B4FBD4610380444439FEC /* Pods-Hunt Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hunt Tracker.release.xcconfig"; path = "Target Support Files/Pods-Hunt Tracker/Pods-Hunt Tracker.release.xcconfig"; sourceTree = "<group>"; };
+		519730DE07D923AD51F88F4A /* Pods-Hunt Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hunt Tracker.debug.xcconfig"; path = "Target Support Files/Pods-Hunt Tracker/Pods-Hunt Tracker.debug.xcconfig"; sourceTree = "<group>"; };
+		63D68C2E8BD7322E7927DB97 /* Pods_Hunt_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hunt_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70452DEE23A7E04C006CFA5B /* AnimalsShotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsShotViewController.swift; sourceTree = "<group>"; };
+		70452DF023A7FAEB006CFA5B /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		70452DF223A80032006CFA5B /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
+		706E9C9623A5E5C300B9DD4A /* TextEntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEntryTableViewCell.swift; sourceTree = "<group>"; };
+		706E9C9723A5E5C300B9DD4A /* TextEntryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextEntryTableViewCell.xib; sourceTree = "<group>"; };
+		706E9C9A23A5E67300B9DD4A /* LabeledEntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledEntryTableViewCell.swift; sourceTree = "<group>"; };
+		706E9C9B23A5E67300B9DD4A /* LabeledEntryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabeledEntryTableViewCell.xib; sourceTree = "<group>"; };
+		706E9C9E23A6951700B9DD4A /* FeederTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeederTableViewCell.swift; sourceTree = "<group>"; };
+		706E9C9F23A6951700B9DD4A /* FeederTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeederTableViewCell.xib; sourceTree = "<group>"; };
+		706E9CA223A6952E00B9DD4A /* Feeder Cell Delegate Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Feeder Cell Delegate Protocol.swift"; sourceTree = "<group>"; };
+		706E9CA623A69EC400B9DD4A /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		706E9CA823A6B76F00B9DD4A /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		706E9CAA23A6BA2700B9DD4A /* AnimalsSeenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsSeenViewController.swift; sourceTree = "<group>"; };
+		706E9CAC23A6CBC900B9DD4A /* CounterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterTableViewCell.swift; sourceTree = "<group>"; };
+		706E9CAD23A6CBC900B9DD4A /* CounterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CounterTableViewCell.xib; sourceTree = "<group>"; };
+		706E9CB023A6CBD700B9DD4A /* Counter Cell Delegate Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Counter Cell Delegate Protocol.swift"; sourceTree = "<group>"; };
+		706E9CB223A6DC2700B9DD4A /* NewAnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAnimalViewController.swift; sourceTree = "<group>"; };
+		706E9CB423A714A200B9DD4A /* NewSubtypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSubtypeViewController.swift; sourceTree = "<group>"; };
 		70DFF70423A564A6000FE306 /* Hunt Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hunt Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70DFF70723A564A6000FE306 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70DFF70923A564A6000FE306 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		70DFF70B23A564A6000FE306 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		70DFF70E23A564A6000FE306 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		70DFF71023A564A8000FE306 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70DFF71323A564A8000FE306 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70DFF71523A564A8000FE306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70DFF72023A567F0000FE306 /* Hunt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hunt.swift; sourceTree = "<group>"; };
+		70DFF72223A56A97000FE306 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		70DFF72423A56B7A000FE306 /* AnimalSubtype.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalSubtype.swift; sourceTree = "<group>"; };
+		70DFF72623A56C58000FE306 /* Feeder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feeder.swift; sourceTree = "<group>"; };
+		70DFF72823A56D11000FE306 /* SummaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTableViewController.swift; sourceTree = "<group>"; };
+		70DFF72A23A57FDF000FE306 /* SeasonSummaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonSummaryTableViewController.swift; sourceTree = "<group>"; };
+		70DFF72F23A5D396000FE306 /* DateEntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateEntryTableViewCell.swift; sourceTree = "<group>"; };
+		70DFF73023A5D396000FE306 /* DateEntryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateEntryTableViewCell.xib; sourceTree = "<group>"; };
+		70DFF73323A5D493000FE306 /* Date Picker Cell Delegate Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date Picker Cell Delegate Protocol.swift"; sourceTree = "<group>"; };
+		70DFF73923A5DA27000FE306 /* Labeled Entry Cell Delegate Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Labeled Entry Cell Delegate Protocol.swift"; sourceTree = "<group>"; };
+		70DFF73F23A5DE39000FE306 /* Text Entry Cell Delegate Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text Entry Cell Delegate Protocol.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +91,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30E6AC7C7977EF48092E24DB /* Pods_Hunt_Tracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		47F66A55135A366925B2C1EA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				519730DE07D923AD51F88F4A /* Pods-Hunt Tracker.debug.xcconfig */,
+				225B4FBD4610380444439FEC /* Pods-Hunt Tracker.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		70DFF6FB23A564A6000FE306 = {
 			isa = PBXGroup;
 			children = (
 				70DFF70623A564A6000FE306 /* Hunt Tracker */,
 				70DFF70523A564A6000FE306 /* Products */,
+				47F66A55135A366925B2C1EA /* Pods */,
+				F14F5F54AE133BC0CDDA96A3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +128,83 @@
 		70DFF70623A564A6000FE306 /* Hunt Tracker */ = {
 			isa = PBXGroup;
 			children = (
-				70DFF70723A564A6000FE306 /* AppDelegate.swift */,
-				70DFF70923A564A6000FE306 /* SceneDelegate.swift */,
-				70DFF70B23A564A6000FE306 /* ViewController.swift */,
-				70DFF70D23A564A6000FE306 /* Main.storyboard */,
-				70DFF71023A564A8000FE306 /* Assets.xcassets */,
-				70DFF71223A564A8000FE306 /* LaunchScreen.storyboard */,
+				70DFF71F23A56515000FE306 /* Model */,
+				70DFF71B23A564E7000FE306 /* Controller */,
+				70DFF71C23A564F4000FE306 /* View */,
+				70DFF71D23A56501000FE306 /* Supporting Files */,
 				70DFF71523A564A8000FE306 /* Info.plist */,
 			);
 			path = "Hunt Tracker";
+			sourceTree = "<group>";
+		};
+		70DFF71B23A564E7000FE306 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				70DFF70723A564A6000FE306 /* AppDelegate.swift */,
+				70DFF70923A564A6000FE306 /* SceneDelegate.swift */,
+				70DFF72823A56D11000FE306 /* SummaryTableViewController.swift */,
+				70DFF72A23A57FDF000FE306 /* SeasonSummaryTableViewController.swift */,
+				706E9CA623A69EC400B9DD4A /* TabBarViewController.swift */,
+				706E9CA823A6B76F00B9DD4A /* InfoViewController.swift */,
+				706E9CAA23A6BA2700B9DD4A /* AnimalsSeenViewController.swift */,
+				70452DEE23A7E04C006CFA5B /* AnimalsShotViewController.swift */,
+				70452DF023A7FAEB006CFA5B /* NotesViewController.swift */,
+				70452DF223A80032006CFA5B /* SummaryViewController.swift */,
+				706E9CB223A6DC2700B9DD4A /* NewAnimalViewController.swift */,
+				706E9CB423A714A200B9DD4A /* NewSubtypeViewController.swift */,
+				70DFF72F23A5D396000FE306 /* DateEntryTableViewCell.swift */,
+				706E9C9A23A5E67300B9DD4A /* LabeledEntryTableViewCell.swift */,
+				706E9C9623A5E5C300B9DD4A /* TextEntryTableViewCell.swift */,
+				706E9C9E23A6951700B9DD4A /* FeederTableViewCell.swift */,
+				706E9CAC23A6CBC900B9DD4A /* CounterTableViewCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		70DFF71C23A564F4000FE306 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				70DFF70D23A564A6000FE306 /* Main.storyboard */,
+				70DFF73023A5D396000FE306 /* DateEntryTableViewCell.xib */,
+				706E9C9B23A5E67300B9DD4A /* LabeledEntryTableViewCell.xib */,
+				706E9C9723A5E5C300B9DD4A /* TextEntryTableViewCell.xib */,
+				706E9C9F23A6951700B9DD4A /* FeederTableViewCell.xib */,
+				706E9CAD23A6CBC900B9DD4A /* CounterTableViewCell.xib */,
+				70DFF71223A564A8000FE306 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		70DFF71D23A56501000FE306 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				70DFF71023A564A8000FE306 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		70DFF71F23A56515000FE306 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				70DFF72023A567F0000FE306 /* Hunt.swift */,
+				70DFF72223A56A97000FE306 /* Animal.swift */,
+				70DFF72423A56B7A000FE306 /* AnimalSubtype.swift */,
+				70DFF72623A56C58000FE306 /* Feeder.swift */,
+				70DFF73323A5D493000FE306 /* Date Picker Cell Delegate Protocol.swift */,
+				70DFF73923A5DA27000FE306 /* Labeled Entry Cell Delegate Protocol.swift */,
+				70DFF73F23A5DE39000FE306 /* Text Entry Cell Delegate Protocol.swift */,
+				706E9CA223A6952E00B9DD4A /* Feeder Cell Delegate Protocol.swift */,
+				706E9CB023A6CBD700B9DD4A /* Counter Cell Delegate Protocol.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F14F5F54AE133BC0CDDA96A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63D68C2E8BD7322E7927DB97 /* Pods_Hunt_Tracker.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +214,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 70DFF71823A564A8000FE306 /* Build configuration list for PBXNativeTarget "Hunt Tracker" */;
 			buildPhases = (
+				E54395029E1C75ED4705E7D0 /* [CP] Check Pods Manifest.lock */,
 				70DFF70023A564A6000FE306 /* Sources */,
 				70DFF70123A564A6000FE306 /* Frameworks */,
 				70DFF70223A564A6000FE306 /* Resources */,
+				C2C93FF682F115E82C188852 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,21 +268,91 @@
 			buildActionMask = 2147483647;
 			files = (
 				70DFF71423A564A8000FE306 /* LaunchScreen.storyboard in Resources */,
+				706E9CA123A6951700B9DD4A /* FeederTableViewCell.xib in Resources */,
+				706E9C9D23A5E67300B9DD4A /* LabeledEntryTableViewCell.xib in Resources */,
 				70DFF71123A564A8000FE306 /* Assets.xcassets in Resources */,
+				706E9CAF23A6CBC900B9DD4A /* CounterTableViewCell.xib in Resources */,
+				70DFF73223A5D396000FE306 /* DateEntryTableViewCell.xib in Resources */,
 				70DFF70F23A564A6000FE306 /* Main.storyboard in Resources */,
+				706E9C9923A5E5C300B9DD4A /* TextEntryTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C2C93FF682F115E82C188852 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hunt Tracker/Pods-Hunt Tracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hunt Tracker/Pods-Hunt Tracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hunt Tracker/Pods-Hunt Tracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E54395029E1C75ED4705E7D0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hunt Tracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		70DFF70023A564A6000FE306 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70DFF70C23A564A6000FE306 /* ViewController.swift in Sources */,
+				70DFF72923A56D11000FE306 /* SummaryTableViewController.swift in Sources */,
+				70452DF323A80032006CFA5B /* SummaryViewController.swift in Sources */,
+				706E9C9C23A5E67300B9DD4A /* LabeledEntryTableViewCell.swift in Sources */,
+				70DFF72523A56B7A000FE306 /* AnimalSubtype.swift in Sources */,
+				706E9CB323A6DC2700B9DD4A /* NewAnimalViewController.swift in Sources */,
+				70DFF72723A56C58000FE306 /* Feeder.swift in Sources */,
+				70DFF73A23A5DA27000FE306 /* Labeled Entry Cell Delegate Protocol.swift in Sources */,
+				706E9CAE23A6CBC900B9DD4A /* CounterTableViewCell.swift in Sources */,
+				706E9CAB23A6BA2700B9DD4A /* AnimalsSeenViewController.swift in Sources */,
+				70DFF73423A5D493000FE306 /* Date Picker Cell Delegate Protocol.swift in Sources */,
+				706E9CA723A69EC400B9DD4A /* TabBarViewController.swift in Sources */,
+				70DFF72123A567F0000FE306 /* Hunt.swift in Sources */,
+				706E9CA923A6B76F00B9DD4A /* InfoViewController.swift in Sources */,
+				70452DEF23A7E04C006CFA5B /* AnimalsShotViewController.swift in Sources */,
+				706E9CA323A6952E00B9DD4A /* Feeder Cell Delegate Protocol.swift in Sources */,
+				706E9CB123A6CBD700B9DD4A /* Counter Cell Delegate Protocol.swift in Sources */,
+				706E9CB523A714A200B9DD4A /* NewSubtypeViewController.swift in Sources */,
+				706E9CA023A6951700B9DD4A /* FeederTableViewCell.swift in Sources */,
+				70DFF72B23A57FDF000FE306 /* SeasonSummaryTableViewController.swift in Sources */,
+				706E9C9823A5E5C300B9DD4A /* TextEntryTableViewCell.swift in Sources */,
+				70DFF73123A5D396000FE306 /* DateEntryTableViewCell.swift in Sources */,
+				70DFF74023A5DE39000FE306 /* Text Entry Cell Delegate Protocol.swift in Sources */,
+				70452DF123A7FAEB006CFA5B /* NotesViewController.swift in Sources */,
 				70DFF70823A564A6000FE306 /* AppDelegate.swift in Sources */,
 				70DFF70A23A564A6000FE306 /* SceneDelegate.swift in Sources */,
+				70DFF72323A56A97000FE306 /* Animal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,37 +494,43 @@
 		};
 		70DFF71923A564A8000FE306 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 519730DE07D923AD51F88F4A /* Pods-Hunt Tracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 92TR5XDFMG;
 				INFOPLIST_FILE = "Hunt Tracker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Ryan-s-Apps.Hunt-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		70DFF71A23A564A8000FE306 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 225B4FBD4610380444439FEC /* Pods-Hunt Tracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 92TR5XDFMG;
 				INFOPLIST_FILE = "Hunt Tracker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Ryan-s-Apps.Hunt-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
