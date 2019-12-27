@@ -77,7 +77,7 @@ class InfoViewController: UIViewController, UITableViewDelegate, UITableViewData
             let cell = tableView.dequeueReusableCell(withIdentifier: "rightDetail", for: indexPath)
             cell.textLabel?.text = "Hunt Date"
             cell.detailTextLabel?.text = huntDF.string(from: hunt?.date ?? Date())
-            cell.backgroundColor = colorTwo
+            cell.backgroundColor = colorOne
             return cell
         }
         // Date Picker
@@ -86,7 +86,7 @@ class InfoViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.delegate = self
             cell.datePicker.date = hunt?.date ?? Date()
             cell.datePicker.isHidden = !showDatePicker
-            cell.backgroundColor = colorTwo
+            cell.backgroundColor = colorOne
             return cell
         }
         // Blind Entry
@@ -98,8 +98,8 @@ class InfoViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.textField.text = ""
             cell.textField.placeholder = hunt?.blindNumber.description ?? "2"
             cell.type = "Blind"
-            cell.backgroundColor = colorTwo
-            cell.textField.backgroundColor = colorTwo
+            cell.backgroundColor = colorOne
+            cell.textField.backgroundColor = colorOne
             return cell
         }
         // Weather Entry
@@ -114,7 +114,7 @@ class InfoViewController: UIViewController, UITableViewDelegate, UITableViewData
                 cell.textField.text = hunt?.weather
             }
             cell.type = "Weather"
-            cell.backgroundColor = colorTwo
+            cell.backgroundColor = colorOne
             return cell
         }
         // Feeder Entry
@@ -126,8 +126,8 @@ class InfoViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.textField.text = ""
             cell.textField.placeholder = hunt?.feeders.count.description
             cell.type = "Feeders"
-            cell.backgroundColor = colorTwo
-            cell.textField.backgroundColor = colorTwo
+            cell.backgroundColor = colorOne
+            cell.textField.backgroundColor = colorOne
             return cell
         }
         // Feeder Values
@@ -137,7 +137,7 @@ class InfoViewController: UIViewController, UITableViewDelegate, UITableViewData
             guard let feeder = hunt?.feeders[indexPath.row - 1] else {fatalError("Cannot load feeder for cell")}
             cell.label.text = "Feeder \(feeder.number) went off"
             cell.rightSwitch.isOn = feeder.wentOff
-            cell.backgroundColor = colorTwo
+            cell.backgroundColor = colorOne
             cell.rightSwitch.tintColor = colorThree
             cell.rightSwitch.onTintColor = colorThree
             return cell
