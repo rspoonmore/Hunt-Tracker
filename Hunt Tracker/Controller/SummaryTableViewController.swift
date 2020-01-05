@@ -20,7 +20,8 @@ class SummaryTableViewController: UITableViewController {
     var summaryCountArray = [Int]()
     var chosenSeason: String = ""
     var colorOne: UIColor = UIColor.white
-    var colorTwo: UIColor = UIColor.systemGray5
+    var colorTwo: UIColor = UIColor.lightGray
+//    var colorTwo: UIColor = UIColor.systemGray5
     var colorThree: UIColor = UIColor(displayP3Red: 0.0, green: 144.0/250, blue: 81.0/250, alpha: 100.0)
     
     
@@ -52,8 +53,14 @@ class SummaryTableViewController: UITableViewController {
             cell.textLabel?.text = summarySeasonArray[indexPath.row]
             cell.detailTextLabel?.text = "\(summaryCountArray[indexPath.row]) Hunt(s)"
             cell.backgroundColor = colorTwo
-            let accessoryImageView = UIImageView(image: UIImage(systemName: "chevron.right"))
-            cell.accessoryView = accessoryImageView
+            if #available(iOS 13.0, *) {
+                let accessoryImageView = UIImageView(image: UIImage(systemName: "chevron.right"))
+                cell.accessoryView = accessoryImageView
+                cell.accessoryView?.tintColor = colorThree
+            } else {
+                cell.accessoryType = .disclosureIndicator
+            }
+            cell.tintColor = colorTwo
             cell.accessoryView?.tintColor = colorThree
             cell.tintColor = colorTwo
             

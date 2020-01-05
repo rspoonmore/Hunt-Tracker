@@ -17,6 +17,7 @@ class Hunt: Object {
     @objc dynamic var weather: String = ""
     @objc dynamic var notes: String = ""
     @objc dynamic var season: String = ""
+    @objc dynamic var defaultHunt: Bool = false
     
     @objc dynamic var dateString: String? {
         let stringDF = DateFormatter()

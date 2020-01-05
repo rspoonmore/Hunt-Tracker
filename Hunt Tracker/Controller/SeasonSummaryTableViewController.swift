@@ -52,9 +52,13 @@ class SeasonSummaryTableViewController: UITableViewController {
         cell.detailTextLabel?.text = "Seen: \(huntArray?[indexPath.row].animalsSeen ?? 0), Shot: \(huntArray?[indexPath.row].animalsShot ?? 0)"
         
         cell.backgroundColor = colorTwo
-        let accessoryImageView = UIImageView(image: UIImage(systemName: "chevron.right"))
-        cell.accessoryView = accessoryImageView
-        cell.accessoryView?.tintColor = colorThree
+        if #available(iOS 13.0, *) {
+            let accessoryImageView = UIImageView(image: UIImage(systemName: "chevron.right"))
+            cell.accessoryView = accessoryImageView
+            cell.accessoryView?.tintColor = colorThree
+        } else {
+            cell.accessoryType = .disclosureIndicator
+        }
         cell.tintColor = colorTwo
         
         let backgroundView = UIView()
