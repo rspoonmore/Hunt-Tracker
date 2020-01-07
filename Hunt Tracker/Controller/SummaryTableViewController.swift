@@ -16,12 +16,13 @@ class SummaryTableViewController: UITableViewController {
     lazy var realm: Realm = try! Realm()
     var huntArray: Results<Hunt>?
     var newGeneratedHunt: Hunt?
+    var defaultHunt: Hunt?
+    var defaultExists: Bool = false
     var summarySeasonArray = [String]()
     var summaryCountArray = [Int]()
     var chosenSeason: String = ""
     var colorOne: UIColor = UIColor.white
     var colorTwo: UIColor = UIColor.lightGray
-//    var colorTwo: UIColor = UIColor.systemGray5
     var colorThree: UIColor = UIColor(displayP3Red: 0.0, green: 144.0/250, blue: 81.0/250, alpha: 100.0)
     
     
@@ -89,6 +90,12 @@ class SummaryTableViewController: UITableViewController {
     
     // MARK: - Set Colors
     func setColors() {
+        if #available(iOS 13.0, *) {
+            colorTwo = UIColor.systemGray5
+        }
+        else {
+            colorTwo = UIColor.lightGray
+        }
         tableView.backgroundColor = colorTwo
         navigationController?.navigationBar.tintColor = colorThree
         navigationController?.navigationBar.backgroundColor = colorTwo
@@ -101,6 +108,14 @@ class SummaryTableViewController: UITableViewController {
         loadHunts()
         performSegue(withIdentifier: "newHuntFromPlus", sender: self)
     }
+    
+    // MARK: - Change Default Hunt Button
+    @IBAction func changeDefaultHunt(_ sender: Any) {
+        loadDefaultHunt()
+        loadHunts()
+        performSegue(withIdentifier: "defaultHunt", sender: self)
+    }
+    
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -123,13 +138,28 @@ class SummaryTableViewController: UITableViewController {
             destVC.colorThree = colorThree
             loadHunts()
         }
+        else if segue.identifier == "defaultHunt" {
+            let destVC = segue.destination as! DefaultHuntAnimalController
+            destVC.colorOne = colorOne
+            destVC.colorTwo = colorTwo
+            destVC.colorThree = colorThree
+            destVC.realm = realm
+            destVC.hunt = defaultHunt
+            loadHunts()
+        }
     }
     
     // MARK: - Load Hunts
     func loadHunts() {
         summarySeasonArray = []
         summaryCountArray = []
-        huntArray = realm.objects(Hunt.self).sorted(byKeyPath: "date", ascending: true)
+        let predicate = NSPredicate(format: "defaultHunt == %@", argumentArray: [false])
+        huntArray = realm.objects(Hunt.self).filter(predicate).sorted(byKeyPath: "date", ascending: true)
+        let defaultArray = realm.objects(Hunt.self).filter(NSPredicate(format: "defaultHunt == %@", argumentArray: [true]))
+        if !defaultArray.isEmpty {
+            defaultHunt = defaultArray[0]
+        }
+        defaultExists = defaultHunt != nil
         
         if !(huntArray?.isEmpty ?? true) {
             for hunt in huntArray! {
@@ -146,9 +176,41 @@ class SummaryTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
+    // MARK: - Load Default Hunt
+    func loadDefaultHunt() {
+        if !defaultExists {
+            newHunt()
+            do {
+                try realm.write {
+                    newGeneratedHunt?.defaultHunt = true
+                }
+            }
+            catch {
+                print("Error setting new hunt as default: \(error)")
+            }
+            defaultHunt = newGeneratedHunt
+        }
+    }
+    
     // MARK: - Create New Hunt
     func newHunt() {
         newGeneratedHunt = Hunt(on: Date()) as Hunt?
+        if defaultExists {
+            guard let animals = defaultHunt?.animals else {fatalError("Cannot unwrap animals from default hunt")}
+            for animal in animals {
+                let newAnimal = Animal()
+                newAnimal.name = animal.name
+                for subtype in animal.subtypes {
+                    let newSub = AnimalSubtype()
+                    newSub.name = subtype.name
+                    newSub.totalSeen = subtype.totalSeen
+                    newSub.totalShot = subtype.totalShot
+                    newAnimal.subtypes.append(newSub)
+                }
+                newGeneratedHunt?.animals.append(newAnimal)
+            }
+        }
+        
         do {
             try realm.write{
                 realm.add(newGeneratedHunt!)

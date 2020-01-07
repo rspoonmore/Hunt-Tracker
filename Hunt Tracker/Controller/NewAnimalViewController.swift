@@ -17,6 +17,8 @@ class NewAnimalViewController: UIViewController, UITextFieldDelegate {
     var hunt: Hunt?
     var showAddButton: Bool = false
     var parentVC: AnimalsSeenViewController?
+    var defaultVC: DefaultHuntAnimalController?
+    var senderVC: String?
     var colorOne: UIColor?
     var colorTwo: UIColor?
     var colorThree: UIColor?
@@ -45,10 +47,16 @@ class NewAnimalViewController: UIViewController, UITextFieldDelegate {
     
 
     func loadHunt() {
-        guard let date = dataRequestDate else {fatalError("Cannot find selected hunt date")}
-        guard let blind = dataRequestBlind else {fatalError("Cannot find selected hunt blind")}
-        let predicate: NSPredicate = NSPredicate(format: "date == %@ && blindNumber == %@", argumentArray: [date, blind])
-        hunt = realm?.objects(Hunt.self).filter(predicate)[0]
+        if senderVC == "default" {
+            let predicate: NSPredicate = NSPredicate(format: "defaultHunt == %@", argumentArray: [true])
+            hunt = realm?.objects(Hunt.self).filter(predicate)[0]
+        }
+        else if senderVC == "seen" {
+            guard let date = dataRequestDate else {fatalError("Cannot find selected hunt date")}
+            guard let blind = dataRequestBlind else {fatalError("Cannot find selected hunt blind")}
+            let predicate: NSPredicate = NSPredicate(format: "date == %@ && blindNumber == %@", argumentArray: [date, blind])
+            hunt = realm?.objects(Hunt.self).filter(predicate)[0]
+        }
     }
     
     func updateAddButtonLogic() -> Bool {
@@ -136,8 +144,14 @@ class NewAnimalViewController: UIViewController, UITextFieldDelegate {
         subtypeNameTextField.text = ""
         numberSeenTextField.text = ""
         addAppear()
-        parentVC?.loadHunt()
-        parentVC?.tableView.reloadData()
+        if senderVC == "seen" {
+            parentVC?.loadHunt()
+            parentVC?.tableView?.reloadData()
+        }
+        else if senderVC == "default" {
+            defaultVC?.loadHunt()
+            defaultVC?.tableView?.reloadData()
+        }
         self.dismiss(animated: true, completion: nil)
     }
     

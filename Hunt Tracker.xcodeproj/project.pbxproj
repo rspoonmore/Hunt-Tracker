@@ -11,6 +11,8 @@
 		70452DEF23A7E04C006CFA5B /* AnimalsShotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70452DEE23A7E04C006CFA5B /* AnimalsShotViewController.swift */; };
 		70452DF123A7FAEB006CFA5B /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70452DF023A7FAEB006CFA5B /* NotesViewController.swift */; };
 		70452DF323A80032006CFA5B /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70452DF223A80032006CFA5B /* SummaryViewController.swift */; };
+		706E688323C3F0020086708B /* AnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706E688223C3F0020086708B /* AnimalViewController.swift */; };
+		706E688523C41A980086708B /* DefaultHuntAnimalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706E688423C41A980086708B /* DefaultHuntAnimalController.swift */; };
 		706E9C9823A5E5C300B9DD4A /* TextEntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706E9C9623A5E5C300B9DD4A /* TextEntryTableViewCell.swift */; };
 		706E9C9923A5E5C300B9DD4A /* TextEntryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706E9C9723A5E5C300B9DD4A /* TextEntryTableViewCell.xib */; };
 		706E9C9C23A5E67300B9DD4A /* LabeledEntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706E9C9A23A5E67300B9DD4A /* LabeledEntryTableViewCell.swift */; };
@@ -51,6 +53,8 @@
 		70452DEE23A7E04C006CFA5B /* AnimalsShotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsShotViewController.swift; sourceTree = "<group>"; };
 		70452DF023A7FAEB006CFA5B /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		70452DF223A80032006CFA5B /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
+		706E688223C3F0020086708B /* AnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalViewController.swift; sourceTree = "<group>"; };
+		706E688423C41A980086708B /* DefaultHuntAnimalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHuntAnimalController.swift; sourceTree = "<group>"; };
 		706E9C9623A5E5C300B9DD4A /* TextEntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEntryTableViewCell.swift; sourceTree = "<group>"; };
 		706E9C9723A5E5C300B9DD4A /* TextEntryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextEntryTableViewCell.xib; sourceTree = "<group>"; };
 		706E9C9A23A5E67300B9DD4A /* LabeledEntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledEntryTableViewCell.swift; sourceTree = "<group>"; };
@@ -143,9 +147,11 @@
 				70DFF70723A564A6000FE306 /* AppDelegate.swift */,
 				70DFF70923A564A6000FE306 /* SceneDelegate.swift */,
 				70DFF72823A56D11000FE306 /* SummaryTableViewController.swift */,
+				706E688423C41A980086708B /* DefaultHuntAnimalController.swift */,
 				70DFF72A23A57FDF000FE306 /* SeasonSummaryTableViewController.swift */,
 				706E9CA623A69EC400B9DD4A /* TabBarViewController.swift */,
 				706E9CA823A6B76F00B9DD4A /* InfoViewController.swift */,
+				706E688223C3F0020086708B /* AnimalViewController.swift */,
 				706E9CAA23A6BA2700B9DD4A /* AnimalsSeenViewController.swift */,
 				70452DEE23A7E04C006CFA5B /* AnimalsShotViewController.swift */,
 				70452DF023A7FAEB006CFA5B /* NotesViewController.swift */,
@@ -329,8 +335,10 @@
 			files = (
 				70DFF72923A56D11000FE306 /* SummaryTableViewController.swift in Sources */,
 				70452DF323A80032006CFA5B /* SummaryViewController.swift in Sources */,
+				706E688523C41A980086708B /* DefaultHuntAnimalController.swift in Sources */,
 				706E9C9C23A5E67300B9DD4A /* LabeledEntryTableViewCell.swift in Sources */,
 				70DFF72523A56B7A000FE306 /* AnimalSubtype.swift in Sources */,
+				706E688323C3F0020086708B /* AnimalViewController.swift in Sources */,
 				706E9CB323A6DC2700B9DD4A /* NewAnimalViewController.swift in Sources */,
 				70DFF72723A56C58000FE306 /* Feeder.swift in Sources */,
 				70DFF73A23A5DA27000FE306 /* Labeled Entry Cell Delegate Protocol.swift in Sources */,
@@ -498,7 +506,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 92TR5XDFMG;
 				INFOPLIST_FILE = "Hunt Tracker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
@@ -506,7 +514,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Ryan-s-Apps.Hunt-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -520,7 +528,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 92TR5XDFMG;
 				INFOPLIST_FILE = "Hunt Tracker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
@@ -528,7 +536,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Ryan-s-Apps.Hunt-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

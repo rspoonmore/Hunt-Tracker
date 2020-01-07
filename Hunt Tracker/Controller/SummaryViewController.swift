@@ -52,7 +52,7 @@ class SummaryViewController: UIViewController {
         dataRequestBlind = tabVC?.dataRequestBlind
         guard let date = dataRequestDate else {fatalError("Cannot find selected hunt date")}
         guard let blind = dataRequestBlind else {fatalError("Cannot find selected hunt blind")}
-        let predicate: NSPredicate = NSPredicate(format: "date == %@ && blindNumber == %@", argumentArray: [date, blind])
+        let predicate: NSPredicate = NSPredicate(format: "date == %@ && blindNumber == %@ && defaultHunt == %@", argumentArray: [date, blind, false])
         hunt = realm?.objects(Hunt.self).filter(predicate)[0]
     }
     

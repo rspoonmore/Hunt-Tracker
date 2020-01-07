@@ -1,20 +1,18 @@
 //
-//  AnimalsSeenViewController.swift
+//  DefaultHuntAnimalController.swift
 //  Hunt Tracker
 //
-//  Created by Ryan Spoonmore on 12/15/19.
-//  Copyright © 2019 Ryan's Apps. All rights reserved.
+//  Created by Ryan Spoonmore on 1/6/20.
+//  Copyright © 2020 Ryan's Apps. All rights reserved.
 //
 
 import UIKit
 import RealmSwift
 
-class AnimalsSeenViewController: AnimalViewController {
+class DefaultHuntAnimalController: AnimalViewController {
 
-    var tabVC: TabBarViewController?
     @IBOutlet weak var connectedTableView: UITableView!
-
-
+    
     override func viewDidLoad() {
         tableView = connectedTableView!
         super.viewDidLoad()
@@ -23,6 +21,14 @@ class AnimalsSeenViewController: AnimalViewController {
     override func viewWillAppear(_ animated: Bool) {
         tableView = connectedTableView!
         super.viewWillAppear(true)
+    }
+    
+    // MARK: - Set Colors
+    override func setColors() {
+        super.setColors()
+        navigationController?.navigationBar.tintColor = colorThree
+        navigationController?.navigationBar.backgroundColor = colorTwo
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: colorThree!]
     }
 
     
@@ -42,46 +48,28 @@ class AnimalsSeenViewController: AnimalViewController {
         }
         tableView.cellForRow(at: indexPath)?.isSelected = false
     }
-    
-    // MARK: - Set Colors
-    override func setColors() {
-        colorOne = tabVC?.colorOne
-        colorTwo = tabVC?.colorTwo
-        colorThree = tabVC?.colorThree
-        super.setColors()
-    }
 
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "newAnimal" {
             let destVC = segue.destination as! NewAnimalViewController
             destVC.realm = realm
-            destVC.dataRequestDate = dataRequestDate
-            destVC.dataRequestBlind = dataRequestBlind
-            destVC.parentVC = self
-            destVC.senderVC = "seen"
+            destVC.defaultVC = self
+            destVC.senderVC = "default"
         }
         else if segue.identifier == "newSubtype" {
             let destVC = segue.destination as! NewSubtypeViewController
             destVC.realm = realm
-            destVC.dataRequestDate = dataRequestDate
-            destVC.dataRequestBlind = dataRequestBlind
             destVC.animal = chosenAnimal
-            destVC.parentVC = self
-            destVC.senderVC = "seen"
+            destVC.defaultVC = self
+            destVC.senderVC = "default"
         }
     }
 
     // MARK: - Load Hunt
     override func loadHunt() {
         super.loadHunt()
-        tabVC = (self.tabBarController as! TabBarViewController)
-        realm = tabVC?.realm
-        dataRequestDate = tabVC?.dataRequestDate
-        dataRequestBlind = tabVC?.dataRequestBlind
-        guard let date = dataRequestDate else {fatalError("Cannot find selected hunt date")}
-        guard let blind = dataRequestBlind else {fatalError("Cannot find selected hunt blind")}
-        let predicate: NSPredicate = NSPredicate(format: "date == %@ && blindNumber == %@ && defaultHunt == %@", argumentArray: [date, blind, false])
+        let predicate: NSPredicate = NSPredicate(format: "defaultHunt == %@", argumentArray: [true])
         hunt = realm?.objects(Hunt.self).filter(predicate)[0]
         tableView!.reloadData()
     }

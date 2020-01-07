@@ -8,6 +8,58 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Default Hunt Animals-->
+        <scene sceneID="oMl-jJ-dMZ">
+            <objects>
+                <viewController id="r2a-ZJ-Vxq" customClass="DefaultHuntAnimalController" customModule="Hunt_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RBH-B9-dpy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="fwC-IK-yD5">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="basic" textLabel="hgq-pO-p8O" style="IBUITableViewCellStyleDefault" id="4Zw-Y5-620">
+                                        <rect key="frame" x="20" y="55.5" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Zw-Y5-620" id="OOa-DS-88c">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hgq-pO-p8O">
+                                                    <rect key="frame" x="20" y="0.0" width="334" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fwC-IK-yD5" firstAttribute="leading" secondItem="PQR-am-1lp" secondAttribute="leading" id="3h6-DM-FsM"/>
+                            <constraint firstItem="fwC-IK-yD5" firstAttribute="top" secondItem="PQR-am-1lp" secondAttribute="top" id="KIP-3p-r2b"/>
+                            <constraint firstItem="PQR-am-1lp" firstAttribute="trailing" secondItem="fwC-IK-yD5" secondAttribute="trailing" id="aJV-7w-7fH"/>
+                            <constraint firstItem="PQR-am-1lp" firstAttribute="bottom" secondItem="fwC-IK-yD5" secondAttribute="bottom" id="gY6-fl-1cr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PQR-am-1lp"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Default Hunt Animals" largeTitleDisplayMode="never" id="RFQ-OP-czC"/>
+                    <connections>
+                        <outlet property="connectedTableView" destination="fwC-IK-yD5" id="Wy5-NN-bBb"/>
+                        <segue destination="wjE-jY-dAo" kind="showDetail" identifier="newAnimal" id="4ei-ew-0nF"/>
+                        <segue destination="HZq-d1-Jkg" kind="showDetail" identifier="newSubtype" id="anB-ka-bBl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mJg-QW-08l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="175" y="-899"/>
+        </scene>
         <!--Summary-->
         <scene sceneID="T0D-lb-bmF">
             <objects>
@@ -47,6 +99,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Summary" largeTitleDisplayMode="always" id="dPk-s4-ufe">
+                        <barButtonItem key="leftBarButtonItem" title="Set Default" id="s4M-70-MfU">
+                            <connections>
+                                <action selector="changeDefaultHunt:" destination="8p8-IV-hHn" id="LLw-IV-4Ea"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="vqi-bi-FRO">
                             <connections>
                                 <action selector="newHuntPressed:" destination="8p8-IV-hHn" id="oKh-t6-dtl"/>
@@ -57,11 +114,12 @@
                         <outlet property="newHuntButton" destination="vqi-bi-FRO" id="cqY-V3-UBi"/>
                         <segue destination="f3f-En-nHc" kind="show" identifier="goToSeason" id="OGc-Mt-oM9"/>
                         <segue destination="Flm-YI-6we" kind="show" identifier="newHuntFromPlus" id="HoL-Yx-Jts"/>
+                        <segue destination="r2a-ZJ-Vxq" kind="show" identifier="defaultHunt" id="8MR-3Y-UcP"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g94-S0-nNd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="194" y="-175"/>
+            <point key="canvasLocation" x="192.75362318840581" y="-98.4375"/>
         </scene>
         <!--Season Summary-->
         <scene sceneID="cLe-nA-QUf">
@@ -396,7 +454,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" tag="2" title="Animals Seen" image="eyeglasses" catalog="system" selectedImage="eyeglasses" id="729-Mc-bvo"/>
                     <connections>
-                        <outlet property="tableView" destination="MSS-ui-oNh" id="fvg-SY-zvU"/>
+                        <outlet property="connectedTableView" destination="MSS-ui-oNh" id="q4V-cB-HXX"/>
                         <segue destination="wjE-jY-dAo" kind="showDetail" identifier="newAnimal" id="L70-Y2-gxu"/>
                         <segue destination="HZq-d1-Jkg" kind="showDetail" identifier="newSubtype" id="LZ9-rf-Vva"/>
                     </connections>
@@ -488,7 +546,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" tag="3" title="Animals Shot" image="scope" catalog="system" landscapeImage="scope" selectedImage="scope" id="aNW-cx-3D6"/>
                     <connections>
-                        <outlet property="tableView" destination="bwI-Xp-h3k" id="aXd-35-K6z"/>
+                        <outlet property="connectedTableView" destination="bwI-Xp-h3k" id="rRN-Hr-J2D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZPY-hb-wMI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -773,6 +831,8 @@
         <image name="scope" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="anB-ka-bBl"/>
         <segue reference="HoL-Yx-Jts"/>
+        <segue reference="4ei-ew-0nF"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -17,6 +17,8 @@ class SeasonSummaryTableViewController: UITableViewController {
     var realm: Realm?
     var huntArray: Results<Hunt>?
     var newHunt: Hunt?
+    var defaultHunt: Hunt?
+    var defaultExists: Bool = false
     var chosenHuntDate: Date?
     var chosenHuntBlind: Int?
     var colorOne: UIColor?
@@ -130,14 +132,36 @@ class SeasonSummaryTableViewController: UITableViewController {
     
     // MARK: - Load Hunts
     func loadHunts(){
-        let predicate = NSPredicate(format: "self.season == %@", season!)
+        let predicate = NSPredicate(format: "self.season == %@ && defaultHunt == %@", argumentArray: [season!, false])
         huntArray = realm?.objects(Hunt.self).filter(predicate).sorted(byKeyPath: "date", ascending: false)
+        let defaultArray = realm?.objects(Hunt.self).filter(NSPredicate(format: "defaultHunt == %@", argumentArray: [true]))
+        if !(defaultArray?.isEmpty ?? true) {
+            defaultHunt = defaultArray?[0]
+        }
+        
+        defaultExists = defaultHunt != nil
         tableView.reloadData()
     }
     
     // MARK: - Create New Hunt
     func createNewHunt() {
         newHunt = Hunt(on: Date()) as Hunt?
+        if defaultExists {
+            guard let animals = defaultHunt?.animals else {fatalError("Cannot unwrap animals from default hunt")}
+            for animal in animals {
+                let newAnimal = Animal()
+                newAnimal.name = animal.name
+                for subtype in animal.subtypes {
+                    let newSub = AnimalSubtype()
+                    newSub.name = subtype.name
+                    newSub.totalSeen = subtype.totalSeen
+                    newSub.totalShot = subtype.totalShot
+                    newAnimal.subtypes.append(newSub)
+                }
+                newHunt?.animals.append(newAnimal)
+            }
+        }
+        
         do {
             try realm!.write{
                 realm!.add(newHunt!)
