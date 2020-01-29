@@ -9,7 +9,7 @@
         </h1>
         <br>
         <p>
-          <strong>Last updated:</strong> <span id="mod-0p-date">01/09/2020</span>
+          <strong>Last updated:</strong> <span id="mod-0p-date">01/29/2020</span>
           <br>
           <span id="mod-0p-url"></span>
         </p>
@@ -26,8 +26,8 @@
             
             
             <li><a href="#children_personal_information">Children's Personal Information</a></li>
-            <li><a href="#personal_information_retention">How Long We Keep Your Personal Information</a></li>
-            <li><a href="#personal_information_protection">How We Protect Your Personal Information</a></li>
+            <li><a href="#personal_information_retention">How Long we Keep Your Personal Information</a></li>
+            <li><a href="#personal_information_protection">How we Protect Your Personal Information</a></li>
             <li><a href="#policy_changes">Policy Changes</a></li>
             <li><a href="#accessibility">Accessibility</a></li>
             <li><a href="#contact_us">Contact Us</a></li>
@@ -44,7 +44,7 @@
         </h2>
         <div id="mod-1p-practices">
       <p>
-        We may receive technical information about your device, for example, its IP address or operating system.
+        I may receive technical information about your device, for example, its IP address or operating system.
       </p>
     </div>
         <div id="mod-1p-practices-alt"></div>
@@ -119,7 +119,7 @@
           <span class="num">6</span>. Children's Personal Information
         </h2>
         <div id="mod-8p-content">
-    Users of <span class="app-name" style="opacity: 1;">Hunt Tracker</span> must be at least 13 years old. We do not knowingly collect personal information from children. If we learn that we have collected personal information from a child, we will take all reasonable steps to delete it as soon as possible. If you become aware that a child has provided personal information to us, please contact us at the contact information <a href="#contact_us">below</a>.
+    Users of <span class="app-name" style="opacity: 1;">Hunt Tracker</span> must be at least 4 years old. We do not knowingly collect personal information from children. If we learn that we have collected personal information from a child, we will take all reasonable steps to delete it as soon as possible. If you become aware that a child has provided personal information to us, please contact us at the contact information <a href="#contact_us">below</a>.
     </div>
       </div>
 
@@ -130,7 +130,7 @@
           <span class="num">7</span>. How Long We Keep Your Personal Information
         </h2>
         <div id="mod-9p-content">
-  <p>We will keep the personal information that we collect as long as it is necessary for the purposes for which we collect it.</p>
+  <p>We do not knowlingly collect any personal information. If we learn that we have collected any personal information, we will take all reasonable steps to delete it as soon as possible. If you become aware that you have provided personal information to us, please contact us at the contact information <a href="#contact_us">below</a>.</p>
   </div>
       </div>
 
@@ -141,7 +141,7 @@
           <span class="num">8</span>. How We Protect Your Personal Information
         </h2>
         <div id="mod-10p-content">
-  <p>We use encryption to protect personal information stored and transmitted online. Only personnel who need the personal information to perform a specific function have access to such. The computers and servers on which we store personal information are kept in a secure environment.</p>
+  <p>We do not store or use any persoanl information online. Information stored will be held locally on your device only, and will not be accessible online.</p>
   </div>
       </div>
 
