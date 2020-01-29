@@ -1,0 +1,21 @@
+This app is intended to be a simple tool to assist with tracking during any type of hunt. 
+
+The first screen upon launching the app will show you a brief history of each season from June to June of the next year, showing you the number of hunts you have recorded. 
+
+The next screen shows you greater detail into the selected season, showing you each hunt in that season including information such as the day and time of the hunt and how many animals were seen and shot. 
+
+Selecting a hunt brings you to the information gathering views. Hunt info allows you to say when the hunt took place, in which blind you hunted (if applicable), what the weather was like, how many feeders are near you, and whether each went off (if applicable). 
+
+The animals seen screen allows you to manually enter animals that you see for tracking. The animal type can be anything you want such as White Tail Deer, Pigs, Turkeys, etc. and the sub type can be any applicable sub type that you wish to apply such as Buck, Doe, Hen, etc. You can set a default hunt in the first view in order to save time on subsequent hunts. If you set a default hunt, every hunt that you start afterwards will start with the default hunt's animals seen. The default hunt can be changed at any time.
+
+The animals shot screen allows you to mark how many of the seen animals were shot.
+
+The notes screen allows you to enter notes about your hunt that you can view in your summary.
+
+The summary screen briefly summarizes everything you have entered.
+
+Don't like a hunt that you captured? Swipe left on that hunt in the hunt summary screen to delete it. Don't like a sub type of animal that you saved? Swipe left on that cell in the animals seen view to delete it. Don't like an animal that you saved? Swipe left on each sub type within that animal in the animals seen view to delete it.
+
+This app is a labor of love and was made in free time by me, Ryan. If you have any questions, concerns, or helpful suggestions to improve the app, please reach out to me.
+
+Thank you all, and happy hunting!
